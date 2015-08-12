@@ -8,21 +8,21 @@ describe('mergeSort(arr, cmp)', function() {
         y.should.be.equal(1, 'failed when "arr" is a number');
 
         y = mergeSort(undefined);
-        expect(y).to.be.equal(undefined, 'failed when "arr" is a undefined');
+        expect(y).to.be.equal(undefined, 'failed when "arr" is undefined');
 
         y = mergeSort(null);
-        expect(y).to.be.equal(null, 'failed when "arr" is a null');
+        expect(y).to.be.equal(null, 'failed when "arr" is null');
 
         y = mergeSort({});
         y.should.be.deep.equal({}, 'failed when "arr" is an object');
     });
 
-    it('shoud sort the array asceding if "cmp" function is not passed', function() {
+    it('shoud sort the array ascending if "cmp" function is not passed', function() {
         var result = mergeSort([3, 1, 3, 7, 4]);
         result.should.be.deep.equal([1, 3, 3, 4, 7]);
     });
 
-    it('shoud move none numeric values to the end of result array if "cmp" function is not passed', function() {
+    it('shoud move non-numeric values to the end of result array if "cmp" function is not passed', function() {
         var result = mergeSort([3, 1, {}, null, 7, 4]);
         result.slice(0, 4).should.be.deep.equal([1, 3, 4, 7]);
     });
