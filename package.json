@@ -1,0 +1,13 @@
+{
+    "name": "mergesort",
+    "version": "0.0.1",
+    "private": true,
+    "scripts": {
+        "test": "NODE_ENV=test node_modules/.bin/mocha --timeout 10000 -R spec test.js"
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "mocha": ">= 1.4.2",
+        "chai": ">= 1.2.0"
+    }
+}
